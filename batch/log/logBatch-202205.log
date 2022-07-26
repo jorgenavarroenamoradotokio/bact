@@ -1,0 +1,48 @@
+18:03:33.626 [main] INFO  c.f.f.batch.BacthApplicationTests - Starting BacthApplicationTests using Java 11.0.12 on DESKTOP-PRRQ0C0 with PID 5788 (started by juan_ in C:\Users\juan_\OneDrive\Escritorio\casa\jorge\wks\SpringFinProyecto\batch)
+18:03:33.627 [main] INFO  c.f.f.batch.BacthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+18:03:33.997 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:03:33.998 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+18:03:34.017 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.finProyecto.fimoteca.batch.persistencia.film.IFilmRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+18:03:34.018 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+18:03:34.028 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:03:34.029 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18:03:34.053 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+18:03:34.338 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:03:34.778 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:03:34.898 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18:03:34.952 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+18:03:35.112 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18:03:35.213 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18:03:35.666 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:03:35.674 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18:03:36.271 [main] WARN  o.s.b.a.batch.JpaBatchConfigurer - JPA does not support custom isolation levels, so locks may not be taken when launching Jobs. To silence this warning, set 'spring.batch.jdbc.isolation-level-for-create' to 'default'.
+18:03:36.274 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean - No database type set, using meta data indicating: MYSQL
+18:03:36.413 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher - No TaskExecutor has been set, defaulting to synchronous executor.
+18:03:36.626 [main] INFO  c.f.f.batch.BacthApplicationTests - Started BacthApplicationTests in 3.328 seconds (JVM running for 4.084)
+18:03:36.627 [main] INFO  o.s.b.a.b.JobLauncherApplicationRunner - Running default command line with: []
+18:03:36.749 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher - Job: [FlowJob: [name=Migracion de peliculas]] launched with the following parameters: [{}]
+18:03:36.775 [main] INFO  c.f.f.batch.listener.JobListener - Iniciamos el Job
+18:03:36.801 [main] INFO  c.f.f.batch.listener.JobListener - El numero de peliculas a migrar es de: 7
+18:03:36.810 [main] INFO  o.s.batch.core.job.SimpleStepHandler - Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=step1, status=COMPLETED, exitStatus=COMPLETED, readCount=7, filterCount=0, writeCount=7 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
+18:03:36.813 [main] INFO  c.f.f.batch.listener.JobListener - Job Finalizado con exito
+18:03:36.814 [main] INFO  c.f.f.batch.listener.JobListener - El numeo de peliculas pendientes de migrar es: 7
+18:03:36.824 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher - Job: [FlowJob: [name=Migracion de peliculas]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 50ms
+18:03:36.925 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher - Job: [FlowJob: [name=Migracion de peliculas]] launched with the following parameters: [{time=1654013016893}]
+18:03:36.934 [main] INFO  c.f.f.batch.listener.JobListener - Iniciamos el Job
+18:03:36.936 [main] INFO  c.f.f.batch.listener.JobListener - El numero de peliculas a migrar es de: 7
+18:03:36.957 [main] INFO  o.s.batch.core.job.SimpleStepHandler - Executing step: [step1]
+18:03:36.966 [main] INFO  c.f.f.batch.items.FilmItemReader - Leemos de base de datos todas las peliculas pendientes de migrar
+18:03:37.018 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 1 se ha migado con fecha 2022-05-31
+18:03:37.038 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 2 se ha migado con fecha 2022-05-31
+18:03:37.040 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 3 se ha migado con fecha 2022-05-31
+18:03:37.041 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 4 se ha migado con fecha 2022-05-31
+18:03:37.043 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 5 se ha migado con fecha 2022-05-31
+18:03:37.044 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 6 se ha migado con fecha 2022-05-31
+18:03:37.045 [main] INFO  c.f.f.batch.items.FilmItemProcessor - Indicamos que la pelicula con id 7 se ha migado con fecha 2022-05-31
+18:03:37.059 [main] INFO  o.s.batch.core.step.AbstractStep - Step: [step1] executed in 102ms
+18:03:37.071 [main] INFO  c.f.f.batch.listener.JobListener - Job Finalizado con exito
+18:03:37.073 [main] INFO  c.f.f.batch.listener.JobListener - El numeo de peliculas pendientes de migrar es: 0
+18:03:37.083 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher - Job: [FlowJob: [name=Migracion de peliculas]] completed with the following parameters: [{time=1654013016893}] and the following status: [COMPLETED] in 146ms
+18:03:37.099 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+18:03:37.101 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:03:37.111 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
